@@ -133,39 +133,353 @@
     }
   </style>
 </head>
-  <body style="font-family: 'Arial', sans-serif; background-color: #f4f4f9; margin: 0; padding: 0;">
-  <header style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #ff6a00, #ee0979); border-radius: 10px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); color: #fff;">
-  <h1 style="font-size: 42px; font-weight: 700; margin-bottom: 15px; letter-spacing: 2px; text-transform: uppercase;">Royal Ludo Arena</h1>
-  <p style="font-size: 22px; font-weight: 500; line-height: 1.5; max-width: 600px; margin-bottom: 30px; font-style: italic;">একটি নতুন এবং উত্তেজনাপূর্ণ লুডু খেলার অভিজ্ঞতা! খেলুন, মজা করুন, এবং আপনি যখন খেলে, তখন টাকা ইনকাম করুন।</p>
-  <a href="#" style="display: inline-block; padding: 12px 30px; font-size: 18px; font-weight: 600; text-decoration: none; background: #fff; color: #ff6a00; border-radius: 30px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease-in-out;">নিচে ডাউনলোড অপশন এ ক্লিক করে এপ ডাউনলোড করুন</a>
-  </header>
-  
-  <!-- Banner Image Section -->
-  <div class="banner-image" style="display: flex; justify-content: center; padding: 30px 10px; margin-top: 30px;">
-  <img src="https://assets.onecompiler.app/42weepxyg/436w9xh3z/file-T2dryUrTwMiM9TfghwsmeL.webp" alt="Royal Ludo Arena Banner" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-  </div>
-  </body>
-  <div class="content">
-  <p>
-  <h4> <b>Royal Ludo Arena - একটি এক্সক্লুসিভ গেমিং প্ল্যাটফর্ম যেখানে আপনি লুডু খেলতে পারবেন এবং আপনার দক্ষতা দিয়ে টাকা ইনকাম করতে পারবেন। 
-  প্রতিযোগিতামূলক টুর্নামেন্ট, চ্যালেঞ্জ, এবং রিয়েল-টাইম গেমপ্লে উপভোগ করুন। এখানে মজার পাশাপাশি ইনকামের সুযোগও পাবেন, যা 
-  গেমিং অভিজ্ঞতাকে আরও রোমাঞ্চকর করে তুলবে!</b></h4>
-  </p>
-    
-    <div class="download-count" style="background: #2c3e50; color: #fff; padding: 30px 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; font-family: 'Poppins', sans-serif; max-width: 800px; margin: 30px auto;">
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Ludo Arena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Scoped Styles - No Conflict */
+        .custom-header {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .custom-header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-header p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .custom-header a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            background: #fff;
+            color: #ff6a00;
+            border-radius: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .custom-header a:hover {
+            background: #ffd700;
+            color: #d9480f;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* SVG Download Icon */
+        .custom-header a svg {
+            width: 22px;
+            height: 22px;
+            fill: #ff6a00;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .custom-header a:hover svg {
+            fill: #d9480f;
+            transform: rotate(-20deg) scale(1.1);
+        }
+
+        /* Decorative Circles */
+        .custom-header::before,
+        .custom-header::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(40px);
+        }
+
+        .custom-header::before {
+            top: -30px;
+            left: -30px;
+        }
+
+        .custom-header::after {
+            bottom: -30px;
+            right: -30px;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .custom-header {
+                padding: 40px 15px;
+            }
+
+            .custom-header h1 {
+                font-size: 32px;
+            }
+
+            .custom-header p {
+                font-size: 16px;
+            }
+
+            .custom-header a {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+
+            .custom-header a svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="custom-header">
+        <h1>Royal Ludo Arena</h1>
+        <p>একটি নতুন এবং উত্তেজনাপূর্ণ লুডু খেলার অভিজ্ঞতা! খেলুন, মজা করুন, এবং আপনি যখন খেলে, তখন টাকা ইনকাম করুন।</p>
+        <a href="#">
+            <svg viewBox="0 0 24 24">
+                <path d="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2M12,19L7,14H10V9H14V14H17L12,19Z" />
+            </svg>
+            ⭕ নিচের ডাউনলোড গাইড অপশন ফলো করুন এবং ❗APK ডাউনলোড করুন 🎮👇
+        </a>
+    </header>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Ludo Arena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Scoped Styles - No Conflict */
+        .banner-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 15px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-section img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s ease-in-out forwards;
+        }
+
+        .content-box {
+            text-align: center;
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            color: #fff;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s ease-in-out forwards;
+        }
+
+        .content-box h4 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .content-box p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* Decorative SVG Icons */
+        .content-box::before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            filter: blur(40px);
+            z-index: 0;
+        }
+
+        .content-box::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            filter: blur(40px);
+            z-index: 0;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-box {
+                padding: 25px 15px;
+            }
+
+            .content-box h4 {
+                font-size: 20px;
+            }
+
+            .content-box p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner Image Section -->
+    <div class="banner-section">
+        <img src="https://assets.onecompiler.app/42weepxyg/436w9xh3z/file-T2dryUrTwMiM9TfghwsmeL.webp" alt="Royal Ludo Arena Banner">
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-box">
+        <h4><b>Royal Ludo Arena</b></h4>
+        <p>
+            একটি এক্সক্লুসিভ গেমিং প্ল্যাটফর্ম যেখানে আপনি লুডু খেলতে পারবেন এবং আপনার দক্ষতা দিয়ে টাকা ইনকাম করতে পারবেন। 
+            প্রতিযোগিতামূলক টুর্নামেন্ট, চ্যালেঞ্জ, এবং রিয়েল-টাইম গেমপ্লে উপভোগ করুন। এখানে মজার পাশাপাশি ইনকামের সুযোগও পাবেন, যা 
+            গেমিং অভিজ্ঞতাকে আরও রোমাঞ্চকর করে তুলবে!
+        </p>
+    </div>
+
+</body>
+</html>
+    <body style="font-family: 'Poppins', sans-serif; background-color: #f4f4f9; margin: 0; padding: 0;">
+
+  <!-- Download Count Section -->
+  <div class="download-count" style="background: #2c3e50; color: #fff; padding: 30px 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; max-width: 800px; margin: 30px auto; animation: fadeIn 1.5s ease;">
     <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 20px; letter-spacing: 1px;">আমাদের সঙ্গে থাকুন, আরও অনেক কিছু আসছে!</h2>
     <p style="font-size: 18px; margin-bottom: 20px; color: #ecf0f1; font-weight: 500;">
-    আমরা অত্যন্ত আনন্দিত যে আপনি আমাদের বিশ্বস্ত ব্যবহারকারী। আপনার পছন্দে তৈরি আমাদের প্ল্যাটফর্মে আপনিও অংশ নিয়েছেন।
+      আমরা অত্যন্ত আনন্দিত যে আপনি আমাদের বিশ্বস্ত ব্যবহারকারী। আপনার পছন্দে তৈরি আমাদের প্ল্যাটফর্মে আপনিও অংশ নিয়েছেন।
     </p>
-    <div style="background: linear-gradient(135deg, #f39c12, #e74c3c); display: inline-block; padding: 15px 40px; border-radius: 30px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);">
-    <p style="font-size: 26px; font-weight: bold; color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
-    ডাউনলোড সংখ্যা: <span style="color: #fff; font-size: 28px;">10,000+</span>
-    </p>
+    <div style="background: linear-gradient(135deg, #f39c12, #e74c3c); display: inline-block; padding: 15px 40px; border-radius: 30px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); animation: pulse 2s infinite;">
+      <p style="font-size: 26px; font-weight: bold; color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
+        ডাউনলোড সংখ্যা: <span style="font-size: 28px;">1.9K+</span>
+      </p>
     </div>
     <p style="font-size: 16px; margin-top: 15px; color: #bdc3c7; font-weight: 400;">
-    আপনার অভিজ্ঞতা আরো উন্নত করতে আমরা অবিচ্ছিন্নভাবে কাজ করে যাচ্ছি। আমাদের সাথে থাকুন, আরো অনেক নতুন আপডেট আসছে!
+      আপনার অভিজ্ঞতা আরো উন্নত করতে আমরা অবিচ্ছিন্নভাবে কাজ করে যাচ্ছি। আমাদের সাথে থাকুন, আরো অনেক নতুন আপডেট আসছে!
     </p>
-    </div>
+  </div>
+
+  <!-- CSS for Animations and Effects -->
+  <style>
+    /* Fade-in animation for the section */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Pulse animation for the download number section */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+      .download-count {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+
+</body>
     <div class="slideshow">
       <img src="https://assets.onecompiler.app/42weepxyg/436w9q99r/20250123_153241.jpg" alt="Screenshot 1">
       <img src="https://assets.onecompiler.app/42weepxyg/436w9q99r/Screenshot_20250123-152506.png" alt="Screenshot 2">
@@ -247,6 +561,134 @@
   
   </style>
   </head>
+  <!DOCTYPE html>
+  <html lang="bn">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ডাউনলোড সতর্কতা</title>
+  
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <style>
+  /* Custom styles for the section only */
+  .download-alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #ff512f, #dd2476);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 10px 30px rgba(255, 94, 0, 0.4);
+  animation: fadeIn 1s ease-out;
+  position: relative;
+  overflow: hidden;
+  margin: 50px auto;
+  }
+  
+  /* Animated Background Effect */
+  .download-alert::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, #ff3e3e, #ff9c3e, #ff3e3e);
+  z-index: -1;
+  animation: rotateGlow 10s linear infinite;
+  opacity: 0.5;
+  }
+  
+  /* Message Styling */
+  .download-alert p {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff700;
+  transition: color 0.3s ease-in-out;
+  margin: 0;
+  }
+  
+  .download-alert p:hover {
+  color: #ffeb3b;
+  cursor: pointer;
+  }
+  
+  /* SVG Animated Icon */
+  .download-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
+  animation: pulse 1.5s infinite alternate ease-in-out;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+  0% {
+  opacity: 0;
+  transform: translateY(30px);
+  }
+  100% {
+  opacity: 1;
+  transform: translateY(0);
+  }
+  }
+  
+  @keyframes pulse {
+  0% {
+  transform: scale(1);
+  }
+  100% {
+  transform: scale(1.2);
+  }
+  }
+  
+  @keyframes rotateGlow {
+  0% {
+  transform: rotate(0deg);
+  }
+  100% {
+  transform: rotate(360deg);
+  }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+  .download-alert {
+  padding: 15px;
+  max-width: 90%;
+  }
+  
+  .download-alert p {
+  font-size: 18px;
+  }
+  
+  .download-icon {
+  width: 40px;
+  height: 40px;
+  }
+  }
+  </style>
+  </head>
+  <body>
+  
+  <!-- Exclusive Download Alert Section -->
+  <div class="download-alert">
+  <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path fill="#FFD700" d="M12 2a10 10 0 1 1-10 10A10 10 0 0 1 12 2m0 1.67a8.33 8.33 0 1 0 8.33 8.33A8.34 8.34 0 0 0 12 3.67M12 6a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 12 6m0 3.5a.83.83 0 0 1 .83.83v4.17a.83.83 0 0 1-1.67 0V10.33A.83.83 0 0 1 12 9.5m0 8.17a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 12 17.67"/>
+  </svg>
+  <p>ডাউনলোড করার পূর্বে অবশ্যই - <strong>ইন্সটল গাইড দেখে নিন</strong></p>
+  </div>
+  
+  </body>
+  </html>
  <!-- Download App Section -->
 <div class="download-container">
   <a href="#" class="download-btn" id="downloadAppBtn">Download App 🎮</a>
@@ -542,28 +984,701 @@
         }
     </style>
 </head>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Guide - Royal Ludo Arena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Scoped Styles - No Conflict */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: #fff;
+            padding: 50px 20px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .option {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #ff6a00;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            transition: background 0.3s ease;
+        }
+
+        .option:hover {
+            background: #e15900;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: #fff;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            opacity: 0;
+            animation: fadeInContent 0.5s ease forwards;
+        }
+
+        .modal-header {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .modal-body {
+            text-align: center;
+        }
+
+        .modal-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .modal-footer button {
+            padding: 10px 25px;
+            font-size: 16px;
+            background: #ee0979;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background 0.3s ease;
+        }
+
+        .modal-footer button:hover {
+            background: #d17a6a;
+        }
+
+        .modal img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeInImage 1s ease-in-out;
+        }
+
+        .modal .instructions {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInContent {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .option {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Guide - Royal Ludo Arena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Scoped Styles - No Conflict */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: #fff;
+            padding: 60px 20px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .option {
+            display: inline-block;
+            padding: 18px 50px;
+            background: #ff6a00;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 35px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            transition: all 0.4s ease;
+        }
+
+        .option:hover {
+            background: #e15900;
+            transform: scale(1.05);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: #fff;
+            border-radius: 20px;
+            width: 85%;
+            max-width: 900px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            position: relative;
+            opacity: 0;
+            animation: fadeInContent 0.6s ease forwards;
+        }
+
+        .modal-header {
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .modal-body {
+            text-align: center;
+        }
+
+        .modal-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .modal-footer button {
+            padding: 12px 30px;
+            font-size: 18px;
+            background: #ee0979;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 0 15px;
+            transition: background 0.3s ease;
+        }
+
+        .modal-footer button:hover {
+            background: #d17a6a;
+        }
+
+        .modal img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeInImage 1s ease-in-out;
+        }
+
+        .modal .instructions {
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 20px;
+            color: #444;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInContent {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            .option {
+                padding: 15px 35px;
+                font-size: 18px;
+            }
+
+            .modal-content {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Guide - Royal Ludo Arena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Scoped Styles - Clean & Simple */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: white;
+            padding: 50px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .option {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #ff6a00;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            background: #e15900;
+            transform: scale(1.05);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: #fff;
+            border-radius: 12px;
+            width: 85%;
+            max-width: 800px;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInContent 0.6s ease forwards;
+        }
+
+        .modal-header {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .modal-body {
+            text-align: center;
+        }
+
+        .modal-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .modal-footer button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background: #ee0979;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background 0.3s ease;
+        }
+
+        .modal-footer button:hover {
+            background: #d17a6a;
+        }
+
+        .modal img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+            animation: fadeInImage 0.8s ease-in-out;
+        }
+
+        .modal .instructions {
+            font-size: 18px;
+            color: #444;
+            margin-top: 15px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInContent {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .option {
+                padding: 14px 30px;
+                font-size: 16px;
+            }
+
+            .modal-content {
+                width: 90%;
+                padding: 25px;
+            }
+        }
+
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Guide - Royal Ludo Arena</title>
+    <style>
+        /* Scoped Styles for Mobile-Friendly, Small & Smooth Design */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(45deg, #ff6a00, #ee0979);
+            color: white;
+            padding: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 22px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 14px;
+        }
+
+        .option {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 30px;
+            background-color: #ff6a00;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #e15900;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 290px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .modal-header {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .modal-body img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-footer button {
+            padding: 10px 20px;
+            background-color: #ee0979;
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .modal-footer button:hover {
+            background-color: #d17a6a;
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Design for Small Screens */
+        @media (max-width: 480px) {
+            header h1 { font-size: 20px; }
+            header p { font-size: 12px; }
+            .option { padding: 10px 20px; font-size: 14px; }
+            .modal-content { width: 80%; }
+        }
+    </style>
+</head>
 <body>
+
     <!-- Header Section -->
     <header>
         <h1>কিভাবে ইন্সটল করবেন?</h1>
-        <p><b> ROYEL LUDO ARENA APK <b/> ইন্সটল করতে সহজ নির্দেশনা দেখুন।</p>
+        <p><b>ROYAL LUDO ARENA APK</b> ইন্সটল করতে সহজ নির্দেশনা দেখুন।</p>
     </header>
 
     <!-- Install Option Button -->
-    <button class="option" onclick="openModal()">ইন্সটল গাইড দেখতে ক্লিক করুন </button>
+    <button class="option" onclick="openModal()">ইন্সটল গাইড দেখতে ক্লিক করুন</button>
 
     <!-- Modal Section -->
     <div id="installModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 ইন্সটল গাইড
-                <span class="close" onclick="closeModal()">&times;</span>
+                <span class="close" onclick="closeModal()">×</span>
             </div>
             <div class="modal-body">
                 <img id="slide" src="https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132131.jpg" alt="Step 1">
-                <div class="instructions" id="instruction">
-                    ধাপ ১: প্রথমে সফটওয়্যারটি ডাউনলোড করুন।
-                </div>
+                <div id="instruction">ধাপ ১: প্রথমে সফটওয়্যারটি ডাউনলোড করুন।</div>
             </div>
             <div class="modal-footer">
                 <button onclick="prevSlide()">পেছনে</button>
@@ -574,46 +1689,16 @@
 
     <script>
         const images = [
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132131.jpg",
-                text: "ধাপ ১: প্রথমে ডাউনলোড অপশন এ ক্লিক করুন।"
-            },
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132249.jpg",
-                text: "ধাপ ২: Download anyway অপশন এ ক্লিক করুন।"
-            },
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132341.jpg",
-                text: "ধাপ ৩: আবারো Download anyway অপশন এ ক্লিক করুন।"
-            },
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132438.jpg",
-                text: "ধাপ ৪: Open অপশন এ ক্লিক করুন।"
-            },
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132546.jpg",
-                text: "ধাপ ৫: এবার Open With Package Inistaller সিলেক্ট করে Just Once অপশন এ ক্লিক করুন।"
-            },
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132725.jpg",
-                text: "ধাপ ৬: আপনার ফোনের পাসওয়ার্ড এবং ফীঙ্গার প্রিন্ট দিন।"
-            },
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437cz4f84/20250128_123310.jpg",
-                text: "ধাপ ৭: Install অপশন এ ক্লিক করুন।"
-            },
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437cz4f84/20250128_123449.jpg",
-                text: "ধাপ ৮: More Details অপশন এ ক্লিক করুন।"
-            },
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437cz4f84/20250128_123550.jpg",
-                text: "ধাপ ৯: Install Anyway অপশন এ ক্লিক করুন।"
-            },
-            {
-                src: "https://assets.onecompiler.app/42weepxyg/437cz4f84/20250128_123708.jpg",
-                text: "ধাপ ১০: সফলভাবে ইন্সটল সম্পন্ন এবার Open করুন।"
-            }
+            { src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132131.jpg", text: "ধাপ ১: প্রথমে ডাউনলোড অপশন এ ক্লিক করুন।" },
+            { src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132249.jpg", text: "ধাপ ২: Download anyway অপশন এ ক্লিক করুন।" },
+            { src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132341.jpg", text: "ধাপ ৩: আবারো Download anyway অপশন এ ক্লিক করুন।" },
+            { src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132438.jpg", text: "ধাপ ৪: Open অপশন এ ক্লিক করুন।" },
+            { src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132546.jpg", text: "ধাপ ৫: Open With Package Inistaller সিলেক্ট করুন।" },
+            { src: "https://assets.onecompiler.app/42weepxyg/437d4bj8p/20250128_132725.jpg", text: "ধাপ ৬: পাসওয়ার্ড দিন।" },
+            { src: "https://assets.onecompiler.app/42weepxyg/437cz4f84/20250128_123310.jpg", text: "ধাপ ৭: Install অপশন এ ক্লিক করুন।" },
+            { src: "https://assets.onecompiler.app/42weepxyg/437cz4f84/20250128_123449.jpg", text: "ধাপ ৮: More Details অপশন এ ক্লিক করুন।" },
+            { src: "https://assets.onecompiler.app/42weepxyg/437cz4f84/20250128_123550.jpg", text: "ধাপ ৯: Install Anyway অপশন এ ক্লিক করুন।" },
+            { src: "https://assets.onecompiler.app/42weepxyg/437cz4f84/20250128_123708.jpg", text: "ধাপ ১০: সফলভাবে ইন্সটল সম্পন্ন, Open করুন।" }
         ];
 
         let currentSlide = 0;
@@ -650,6 +1735,7 @@
             modal.style.display = "none";
         }
     </script>
+
 </body>
 </html>
 <br><br>
@@ -861,57 +1947,235 @@
     </script>
 </body>
 </html>
-  <div style="text-align: center; font-family: 'Poppins', sans-serif; padding: 20px; background: #f3f4f6;">
-  <h2 style="color: #222; font-size: 24px; margin-bottom: 20px;">পেমেন্ট মাধ্যম</h2>
-  
-  <!-- বিকাশ এবং নগদ সেকশন -->
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="background: linear-gradient(135deg, #f7797d, #fbd786); border-radius: 15px; padding: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-  <img src="https://assets.onecompiler.app/42weepxyg/436yt5z5w/download%20(10).png" alt="বিকাশ" style="max-width: 100px; width: 100%; height: auto; display: block; margin: 0 auto;">
-  <p style="color: #fff; font-size: 18px; font-weight: 600; text-align: center; margin-top: 10px;">বিকাশ</p>
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f9;">
+
+  <!-- Main Section -->
+  <div style="text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #ff7e5f, #feb47b); animation: fadeIn 1.5s ease;">
+    <h2 style="color: #fff; font-size: 36px; margin-bottom: 40px; font-weight: bold; letter-spacing: 1.5px;">পেমেন্ট মাধ্যম</h2>
+    
+    <!-- Payment Method Cards -->
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 50px;">
+      <!-- বিকাশ Card -->
+      <div style="background: linear-gradient(135deg, #ff5858, #fbc2eb); border-radius: 25px; padding: 35px; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; flex: 1 1 calc(50% - 40px); max-width: 380px; transform: scale(1);">
+        <img src="https://assets.onecompiler.app/42weepxyg/436yt5z5w/download%20(10).png" alt="বিকাশ" style="max-width: 120px; width: 100%; height: auto; display: block; margin: 0 auto; transition: transform 0.3s ease;">
+        <p style="color: #fff; font-size: 22px; font-weight: 600; text-align: center; margin-top: 15px;">বিকাশ</p>
+      </div>
+      
+      <!-- নগদ Card -->
+      <div style="background: linear-gradient(135deg, #00c6ff, #0072ff); border-radius: 25px; padding: 35px; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; flex: 1 1 calc(50% - 40px); max-width: 380px; transform: scale(1);">
+        <img src="https://assets.onecompiler.app/42weepxyg/436yt5z5w/download%20(11).png" alt="নগদ" style="max-width: 120px; width: 100%; height: auto; display: block; margin: 0 auto; transition: transform 0.3s ease;">
+        <p style="color: #fff; font-size: 22px; font-weight: 600; text-align: center; margin-top: 15px;">নগদ</p>
+      </div>
+    </div>
+    
+    <!-- Payment Review Section -->
+    <div style="margin-top: 50px; padding: 35px; background: #ffffff; border-radius: 25px; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12); transition: transform 0.3s ease; animation: fadeInUp 1.5s ease-in-out;">
+      <h3 style="margin: 0; font-size: 28px; color: #333; font-weight: bold; letter-spacing: 1px;">পেমেন্ট রিভিউ</h3>
+      <div style="margin-top: 15px; font-size: 40px; color: #ffcc00; letter-spacing: 1px; display: flex; justify-content: center;">
+        ★★★★★
+      </div>
+      <p style="margin: 5px 0 0; font-size: 18px; color: #555; text-align: center;">আমাদের গ্রাহকরা অত্যন্ত সন্তুষ্ট! পেমেন্ট সম্পন্ন করা অত্যন্ত সহজ এবং নিরাপদ।</p>
+      <p style="margin-top: 20px; font-size: 16px; color: #777; text-align: center;">বিশ্বস্ত সেবা, দ্রুত পেমেন্ট। আমরা প্রতিশ্রুতিবদ্ধ আপনার সর্বোত্তম অভিজ্ঞতার জন্য।</p>
+    </div>
+    
+    <!-- Support Section -->
+    <div style="margin-top: 40px; padding: 30px; background: #f4f4f9; border-radius: 25px; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1); animation: fadeInUp 2s ease-in-out;">
+      <h3 style="margin: 0; font-size: 24px; color: #333; font-weight: bold;">২৪/৭ সাপোর্ট</h3>
+      <p style="font-size: 16px; color: #555; text-align: center; margin-top: 10px;">আমরা সব সময় আপনার পাশে আছি। দ্রুত সাপোর্ট পেতে আমাদের সাথে যোগাযোগ করুন।</p>
+    </div>
+
   </div>
-  <div style="background: linear-gradient(135deg, #56ccf2, #2f80ed); border-radius: 15px; padding: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-  <img src="https://assets.onecompiler.app/42weepxyg/436yt5z5w/download%20(11).png" alt="নগদ" style="max-width: 100px; width: 100%; height: auto; display: block; margin: 0 auto;">
-  <p style="color: #fff; font-size: 18px; font-weight: 600; text-align: center; margin-top: 10px;">নগদ</p>
-  </div>
-  </div>
-  
-  <!-- ওয়েবসাইট এবং পেমেন্ট রিভিউ -->
-  <div style="margin-top: 30px; padding: 20px; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-  <h3 style="margin: 0; font-size: 20px; color: #333;">ওয়েবসাইট এবং পেমেন্ট রিভিউ</h3>
-  <div style="margin-top: 10px; font-size: 24px; color: #ffcc00; letter-spacing: 1px;">
-  ★★★★★
-  </div>
-  <p style="margin: 5px 0 0; font-size: 16px; color: #555;">৫ স্টার রেটিং প্রাপ্ত</p>
-  </div>
-  
-  <!-- তথ্য -->
-  <p style="margin-top: 20px; font-size: 16px; color: #555;">দ্রুত পেমেন্ট সম্পন্ন করা হয়।</p>
-  <p style="font-size: 16px; color: #555;">২৪/৭ সাপোর্ট এবং পেমেন্ট রিভিউ ৫ স্টার।</p>
-  </div>
-  <div class="support-section" style="max-width: 600px; margin: 20px auto; padding: 20px; background: linear-gradient(135deg, #6a11cb, #2575fc); border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); text-align: center; font-family: 'Poppins', sans-serif; color: #fff;">
-  <h1 style="font-size: 26px; margin-bottom: 20px; letter-spacing: 1px;">সাপোর্ট</h1>
-  <p style="font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
-  <b>যেকোনো সমস্যা হলে আমাদের সাথে যোগাযোগ করুন:</b>
-  </p>
-  <p style="margin-bottom: 15px;">
-  <a href="mailto:support@royalludoarena.com" style="text-decoration: none; color: #fff; font-size: 16px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.2); padding: 10px 15px; border-radius: 25px; transition: all 0.3s ease;">
-  <img src="https://img.icons8.com/ios-filled/24/ffffff/email.png" alt="ইমেইল" style="width: 20px; height: 20px; vertical-align: middle;"> support@royalludoarena.com
-  </a>
-  </p>
-  <p>
-  <a href="tel:09638487031" style="text-decoration: none; color: #fff; font-size: 16px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.2); padding: 10px 15px; border-radius: 25px; transition: all 0.3s ease;">
-  <img src="https://img.icons8.com/ios-filled/24/ffffff/phone.png" alt="ফোন" style="width: 20px; height: 20px; vertical-align: middle;"> Call - 09638487031
-  </a>
-  </p>
-  </div>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hover Effect for Cards */
+    .payment-method:hover {
+      transform: scale(1.05);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 22px;
+      }
+      .payment-method {
+        flex: 1 1 100%;
+        max-width: 90%;
+      }
+      .payment-method img {
+        max-width: 100px;
+      }
+      .payment-review {
+        padding: 25px;
+      }
+    }
+  </style>
+
+</body>
+</body>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সাপোর্ট</title>
+ 
+    <style>
+        /* Scoped Styles - No Conflict */
+        .custom-support-container {
+            font-family: 'Poppins', sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: linear-gradient(135deg, #4b0082, #8a2be2);
+            border-radius: 15px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .custom-support-container h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-support-container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Stylish Buttons */
+        .custom-support-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 14px 22px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-support-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Animated SVG Icons */
+        .custom-support-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .custom-support-btn:hover svg {
+            transform: scale(1.2);
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating Animation */
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Floating Icon Effect */
+        .floating-icon {
+            animation: floating 2s infinite ease-in-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .custom-support-container {
+                padding: 20px;
+            }
+
+            .custom-support-container h1 {
+                font-size: 24px;
+            }
+
+            .custom-support-btn {
+                font-size: 14px;
+                padding: 12px 18px;
+            }
+
+            .custom-support-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Support Section -->
+    <div class="custom-support-container">
+        <h1>সাপোর্ট</h1>
+        <p><b>যেকোনো সমস্যা হলে আমাদের সাথে যোগাযোগ করুন:</b></p>
+
+        <p>
+            <a href="mailto:support@royalludoarena.com" class="custom-support-btn">
+                <svg class="floating-icon" viewBox="0 0 24 24">
+                    <path d="M12 12.713L1.714 6.5A2 2 0 0 0 2 6h20a2 2 0 0 0 .286.5L12 12.713zM2 8.115V18h20V8.115l-10 6.286-10-6.286z"/>
+                </svg>
+                support@royalludoarena.com
+            </a>
+        </p>
+        <p>
+            <a href="tel:09638487031" class="custom-support-btn">
+                <svg class="floating-icon" viewBox="0 0 24 24">
+                    <path d="M20 15.5c-1.2 0-2.3-.2-3.3-.6-.5-.2-1-.1-1.4.3l-2.2 2.2c-3.2-1.5-5.8-4.1-7.4-7.4l2.2-2.2c.4-.4.5-.9.3-1.4-.4-1-0.6-2.1-0.6-3.3C7.6 2 6.6 1 5.4 1H3.2C2.6 1 2 1.6 2 2.2 2 13.6 10.4 22 21.8 22c.6 0 1.2-.6 1.2-1.2v-2.2c0-1.2-1-2.2-2.2-2.2z"/>
+                </svg>
+                Call - 09638487031
+            </a>
+        </p>
+    </div>
+
+</body>
+</html>
   <!DOCTYPE html>
   <html lang="bn">
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Live Chat Icon</title>
-  <link href="wght@600&display=swap">https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+ 
   <style>
   /* General body styling */
   body {
@@ -1090,8 +2354,135 @@
   </body>
   </html>
   
-  <footer><p> <p style="color: black;" © ২০২৫ Royal Ludo Arena - <b> DEVOLOPER BY X-SHAAN </b>   সকল অধিকার সংরক্ষিত।</p></p></footer>
-  </footer>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ফুটার</title>
+    <style>
+        /* Scoped Styles - No Conflict */
+        .custom-footer {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4b0082, #8a2be2);
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            position: relative;
+            overflow: hidden;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .custom-footer p {
+            margin: 10px 0;
+            font-size: 15px;
+        }
+
+        .custom-footer b {
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            color: #ffcc00;
+        }
+
+        /* SVG Icons */
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .footer-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-icons a svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-icons a:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+
+        .footer-icons a:hover svg {
+            transform: scale(1.2);
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .custom-footer {
+                padding: 15px 10px;
+            }
+
+            .custom-footer p {
+                font-size: 14px;
+            }
+
+            .footer-icons a {
+                width: 35px;
+                height: 35px;
+            }
+
+            .footer-icons a svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Footer Section -->
+    <footer class="custom-footer">
+        <p>© ২০২৫ Royal Ludo Arena - <b>DEVELOPER BY X-SHAAN</b></p>
+        <p>সকল অধিকার সংরক্ষিত।</p>
+        
+        <!-- Social Media Icons -->
+        <div class="footer-icons">
+            <a href="https://facebook.com" target="_blank">
+                <svg viewBox="0 0 24 24">
+                    <path d="M22,12A10,10 0 1,0 12,22A10,10 0 0,0 22,12M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M13,19V12H15.5L16,9H13V7.5C13,6.5 13.5,6 14.5,6H16V3.5H14.5C12,3.5 11,5 11,7V9H9V12H11V19H13Z" />
+                </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <svg viewBox="0 0 24 24">
+                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.89-.53 1.57-1.37 1.89-2.38-.83.49-1.75.85-2.72 1.04a4.3 4.3 0 0 0-7.41 3.92C7.69 8.98 4.07 7.1 1.64 4.17a4.3 4.3 0 0 0 1.33 5.73c-.66-.02-1.28-.2-1.82-.5v.05a4.3 4.3 0 0 0 3.44 4.21c-.56.15-1.14.18-1.72.07a4.3 4.3 0 0 0 4.02 2.99A8.62 8.62 0 0 1 2 18.41a12.13 12.13 0 0 0 6.56 1.92c7.87 0 12.2-6.52 12.2-12.2l-.01-.56A8.7 8.7 0 0 0 22.46 6z" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll(".slideshow img");
